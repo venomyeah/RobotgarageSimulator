@@ -1,5 +1,4 @@
-#ifndef MAIN_WINDOW_H
-#define MAIN_WINDOW_H
+#pragma once
 
 #include <QMainWindow>
 
@@ -7,16 +6,16 @@ namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
+class MainWindow : public QMainWindow {
+  Q_OBJECT
 
-public:
-    explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+ public:
+  explicit MainWindow(QWidget *parent = nullptr);
+  ~MainWindow();
 
-private:
-    Ui::MainWindow *ui;
+ private slots:
+  void on_simulate_btn_clicked();
+
+ private:
+  Ui::MainWindow *ui_;
 };
-
-#endif // MAIN_WINDOW_H
